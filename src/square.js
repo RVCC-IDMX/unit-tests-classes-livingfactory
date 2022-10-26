@@ -10,7 +10,7 @@
  * Create a square class
  *
  */
-
+const { Rectangle } = require('./rectangle');
 /*
  * Define a Square class that has the following properties:
  *  1) Inherits (extends) from the Rectangle class
@@ -61,7 +61,9 @@ class Square extends Rectangle {
    * @param {number} side - the length of a side of the square
    */
   constructor(side) {
-    // write your code here
+    super(side, side);
+    this.name = 'Square';
+    this.side = side;
   }
 
   /**
@@ -69,7 +71,7 @@ class Square extends Rectangle {
    * @returns {number} the side length
    */
   getSide() {
-    // write your code here
+    return this.side;
   }
 }
 
